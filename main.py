@@ -1,5 +1,5 @@
-from flask import Flask, render_template,request,jsonify
-from flask_cors import CORS,cross_origin
+from flask import Flask, render_template,request
+from flask_cors import cross_origin
 import pickle
 
 app= Flask(__name__)
@@ -148,13 +148,13 @@ def index():
         except Exception as e:
             print('The Exception message is: ', e)
             return 'something is wrong'
-            return render_template('results.html')
+            #return render_template('results.html')
 
     else:
         return render_template('index.html')
 
 if __name__ == "__main__":
-    app.run(host='127.0.0.1', port=8001, debug=True)
+    #app.run(host='127.0.0.1', port=8001, debug=True)
     app.run(debug=True) # running the app
 
 
